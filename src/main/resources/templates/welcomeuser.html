@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Bienvenido a la plataforma</title>
+</head>
+<body style="margin:0;padding:0;background-color:#261C1D;font-family:Georgia,'Times New Roman',serif;">
+
+  <!-- Wrapper -->
+  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"
+         style="background-color:#261C1D;min-height:100vh;">
+    <tr>
+      <td align="center" style="padding:40px 16px;">
+
+        <!-- Card container -->
+        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"
+               style="max-width:600px;">
+
+          <!-- ═══════════════════════════════════════
+               HEADER — pixel art welcome motif
+          ════════════════════════════════════════ -->
+          <tr>
+            <td style="background-color:#351A0E;border-top:4px solid #D68751;border-left:4px solid #D68751;
+                       border-right:4px solid #D68751;border-radius:4px 4px 0 0;padding:0;line-height:0;">
+
+              <div style="background:#351A0E;padding:32px 32px 0 32px;text-align:center;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 560 100"
+                     style="display:block;max-width:560px;margin:0 auto;">
+                  <rect width="560" height="100" fill="#351A0E"/>
+
+                  <!-- Bottom pixel row — warm gradient left to right -->
+                  <rect x="0"   y="92" width="8" height="8" fill="#861A0D"/>
+                  <rect x="16"  y="92" width="8" height="8" fill="#861A0D"/>
+                  <rect x="32"  y="92" width="8" height="8" fill="#C25A37"/>
+                  <rect x="48"  y="92" width="8" height="8" fill="#C25A37"/>
+                  <rect x="64"  y="92" width="8" height="8" fill="#D68751"/>
+                  <rect x="80"  y="92" width="8" height="8" fill="#D68751"/>
+                  <rect x="96"  y="92" width="8" height="8" fill="#EEC28E"/>
+                  <rect x="112" y="92" width="8" height="8" fill="#EEC28E"/>
+                  <rect x="128" y="92" width="8" height="8" fill="#FBDAA4"/>
+                  <rect x="144" y="92" width="8" height="8" fill="#FBDAA4"/>
+                  <rect x="160" y="92" width="8" height="8" fill="#EEC28E"/>
+                  <rect x="176" y="92" width="8" height="8" fill="#FBDAA4"/>
+                  <rect x="192" y="92" width="8" height="8" fill="#EEC28E"/>
+                  <rect x="208" y="92" width="8" height="8" fill="#FBDAA4"/>
+                  <rect x="224" y="92" width="8" height="8" fill="#FFFFFF" opacity="0.9"/>
+                  <rect x="240" y="92" width="8" height="8" fill="#FBDAA4"/>
+                  <rect x="256" y="92" width="8" height="8" fill="#FFFFFF" opacity="0.9"/>
+                  <rect x="272" y="92" width="8" height="8" fill="#FBDAA4"/>
+                  <rect x="288" y="92" width="8" height="8" fill="#FFFFFF" opacity="0.9"/>
+                  <rect x="304" y="92" width="8" height="8" fill="#FBDAA4"/>
+                  <rect x="320" y="92" width="8" height="8" fill="#EEC28E"/>
+                  <rect x="336" y="92" width="8" height="8" fill="#FBDAA4"/>
+                  <rect x="352" y="92" width="8" height="8" fill="#EEC28E"/>
+                  <rect x="368" y="92" width="8" height="8" fill="#FBDAA4"/>
+                  <rect x="384" y="92" width="8" height="8" fill="#EEC28E"/>
+                  <rect x="400" y="92" width="8" height="8" fill="#D68751"/>
+                  <rect x="416" y="92" width="8" height="8" fill="#D68751"/>
+                  <rect x="432" y="92" width="8" height="8" fill="#EEC28E"/>
+                  <rect x="448" y="92" width="8" height="8" fill="#D68751"/>
+                  <rect x="464" y="92" width="8" height="8" fill="#C25A37"/>
+                  <rect x="480" y="92" width="8" height="8" fill="#C25A37"/>
+                  <rect x="496" y="92" width="8" height="8" fill="#861A0D"/>
+                  <rect x="512" y="92" width="8" height="8" fill="#861A0D"/>
+                  <rect x="528" y="92" width="8" height="8" fill="#861A0D"/>
+                  <rect x="544" y="92" width="8" height="8" fill="#861A0D"/>
+
+                  <!-- Second row -->
+                  <rect x="56"  y="80" width="8" height="8" fill="#D68751"/>
+                  <rect x="120" y="80" width="8" height="8" fill="#EEC28E"/>
+                  <rect x="184" y="80" width="8" height="8" fill="#FBDAA4"/>
+                  <rect x="248" y="80" width="8" height="8" fill="#FFFFFF" opacity="0.8"/>
+                  <rect x="312" y="80" width="8" height="8" fill="#FBDAA4"/>
+                  <rect x="376" y="80" width="8" height="8" fill="#EEC28E"/>
+                  <rect x="440" y="80" width="8" height="8" fill="#D68751"/>
+                  <rect x="504" y="80" width="8" height="8" fill="#C25A37"/>
+
+                  <!-- Central star/sun pixel art (welcome symbol) -->
+                  <!-- Outer glow -->
+                  <rect x="248" y="16" width="8"  height="8"  fill="#D68751" opacity="0.5"/>
+                  <rect x="264" y="16" width="8"  height="8"  fill="#D68751" opacity="0.5"/>
+                  <rect x="240" y="24" width="8"  height="8"  fill="#EEC28E" opacity="0.7"/>
+                  <rect x="272" y="24" width="8"  height="8"  fill="#EEC28E" opacity="0.7"/>
+                  <!-- Inner ring -->
+                  <rect x="244" y="32" width="8"  height="8"  fill="#EEC28E"/>
+                  <rect x="260" y="28" width="8"  height="8"  fill="#FBDAA4"/>
+                  <rect x="272" y="32" width="8"  height="8"  fill="#EEC28E"/>
+                  <!-- Core -->
+                  <rect x="252" y="36" width="16" height="16" fill="#FBDAA4"/>
+                  <rect x="256" y="32" width="8"  height="8"  fill="#FFFFFF" opacity="0.9"/>
+                  <!-- Rays -->
+                  <rect x="244" y="44" width="8"  height="8"  fill="#EEC28E"/>
+                  <rect x="272" y="44" width="8"  height="8"  fill="#EEC28E"/>
+                  <rect x="252" y="52" width="8"  height="8"  fill="#D68751"/>
+                  <rect x="260" y="52" width="8"  height="8"  fill="#D68751"/>
+                  <rect x="240" y="52" width="8"  height="8"  fill="#C25A37"/>
+                  <rect x="280" y="52" width="8"  height="8"  fill="#C25A37"/>
+                  <rect x="248" y="60" width="8"  height="8"  fill="#C25A37"/>
+                  <rect x="264" y="60" width="8"  height="8"  fill="#C25A37"/>
+                  <rect x="256" y="64" width="8"  height="8"  fill="#861A0D"/>
+
+                  <!-- Side decoration -->
+                  <rect x="88"  y="44" width="8" height="8" fill="#D68751"/>
+                  <rect x="96"  y="52" width="8" height="8" fill="#EEC28E"/>
+                  <rect x="80"  y="60" width="8" height="8" fill="#C25A37"/>
+                  <rect x="96"  y="68" width="8" height="8" fill="#D68751"/>
+
+                  <rect x="424" y="44" width="8" height="8" fill="#D68751"/>
+                  <rect x="416" y="52" width="8" height="8" fill="#EEC28E"/>
+                  <rect x="432" y="60" width="8" height="8" fill="#C25A37"/>
+                  <rect x="416" y="68" width="8" height="8" fill="#D68751"/>
+                </svg>
+              </div>
+
+              <!-- Brand label -->
+              <div style="background-color:#351A0E;text-align:center;padding:8px 32px 28px 32px;">
+                <span style="font-family:Georgia,'Times New Roman',serif;font-size:13px;letter-spacing:6px;
+                             color:#FBDAA4;text-transform:uppercase;font-weight:normal;">
+                  &#9632;&nbsp;BIENVENIDA&nbsp;&#9632;
+                </span>
+              </div>
+            </td>
+          </tr>
+
+          <!-- ═══════════════════════════════════════
+               BODY
+          ════════════════════════════════════════ -->
+          <tr>
+            <td style="background-color:#2A1C1D;border-left:4px solid #D68751;border-right:4px solid #D68751;
+                       padding:40px 40px 32px 40px;">
+
+              <!-- Saludo -->
+              <p style="margin:0 0 8px 0;font-family:Georgia,'Times New Roman',serif;
+                        font-size:13px;letter-spacing:3px;color:#D68751;text-transform:uppercase;">
+                Bienvenido,
+              </p>
+              <h1 style="margin:0 0 24px 0;font-family:Georgia,'Times New Roman',serif;
+                         font-size:28px;font-weight:normal;color:#FBDAA4;line-height:1.3;">
+                <span th:text="${username}">Usuario</span>
+              </h1>
+
+              <!-- Divider -->
+              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"
+                     style="margin-bottom:24px;">
+                <tr>
+                  <td style="height:1px;background-color:#861A0D;font-size:0;line-height:0;">&nbsp;</td>
+                  <td width="4" style="background-color:#C25A37;font-size:0;line-height:0;">&nbsp;</td>
+                  <td width="4" style="background-color:#D68751;font-size:0;line-height:0;">&nbsp;</td>
+                  <td width="4" style="background-color:#EEC28E;font-size:0;line-height:0;">&nbsp;</td>
+                  <td width="4" style="background-color:#D68751;font-size:0;line-height:0;">&nbsp;</td>
+                  <td width="4" style="background-color:#C25A37;font-size:0;line-height:0;">&nbsp;</td>
+                  <td style="height:1px;background-color:#861A0D;font-size:0;line-height:0;">&nbsp;</td>
+                </tr>
+              </table>
+
+              <!-- Mensaje principal -->
+              <p style="margin:0 0 16px 0;font-family:Georgia,'Times New Roman',serif;
+                        font-size:15px;line-height:1.7;color:#EEC28E;">
+                Nos alegra tenerte aquí. Tu cuenta ha sido creada exitosamente y está lista para ser utilizada.
+              </p>
+              <p style="margin:0 0 32px 0;font-family:Georgia,'Times New Roman',serif;
+                        font-size:14px;line-height:1.6;color:#D68751;">
+                Explora todas las funcionalidades disponibles accediendo a la plataforma con el botón a continuación.
+              </p>
+
+              <!-- Feature list — pixel accented -->
+              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"
+                     style="margin-bottom:36px;background-color:#1E1212;border:1px solid #351A0E;">
+                <tr>
+                  <td style="padding:20px 24px;">
+                    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                      <tr>
+                        <td style="padding-bottom:12px;">
+                          <table role="presentation" cellspacing="0" cellpadding="0" border="0">
+                            <tr>
+                              <td style="width:8px;background-color:#D68751;font-size:0;line-height:0;vertical-align:middle;">&nbsp;</td>
+                              <td style="padding-left:14px;font-family:Georgia,'Times New Roman',serif;
+                                         font-size:14px;color:#EEC28E;line-height:1.5;">
+                                Tu cuenta está activa y verificada
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style="padding-bottom:12px;">
+                          <table role="presentation" cellspacing="0" cellpadding="0" border="0">
+                            <tr>
+                              <td style="width:8px;background-color:#C25A37;font-size:0;line-height:0;vertical-align:middle;">&nbsp;</td>
+                              <td style="padding-left:14px;font-family:Georgia,'Times New Roman',serif;
+                                         font-size:14px;color:#EEC28E;line-height:1.5;">
+                                Accede de forma segura con tus credenciales
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <table role="presentation" cellspacing="0" cellpadding="0" border="0">
+                            <tr>
+                              <td style="width:8px;background-color:#861A0D;font-size:0;line-height:0;vertical-align:middle;">&nbsp;</td>
+                              <td style="padding-left:14px;font-family:Georgia,'Times New Roman',serif;
+                                         font-size:14px;color:#EEC28E;line-height:1.5;">
+                                Explora y utiliza todas las funciones disponibles
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+
+              <!-- CTA Button -->
+              <table role="presentation" cellspacing="0" cellpadding="0" border="0"
+                     style="margin-bottom:32px;">
+                <tr>
+                  <!-- Pixel accent left -->
+                  <td style="width:6px;background-color:#861A0D;font-size:0;line-height:0;">&nbsp;</td>
+                  <td style="width:4px;background-color:#C25A37;font-size:0;line-height:0;">&nbsp;</td>
+                  <td style="width:4px;background-color:#D68751;font-size:0;line-height:0;">&nbsp;</td>
+                  <!-- Button -->
+                  <td>
+                    <a th:href="${appUrl}" href="#"
+                       style="display:inline-block;background-color:#861A0D;
+                              border-top:2px solid #D68751;border-left:2px solid #D68751;
+                              border-bottom:2px solid #351A0E;border-right:2px solid #351A0E;
+                              padding:14px 40px;
+                              font-family:Georgia,'Times New Roman',serif;
+                              font-size:13px;letter-spacing:4px;font-weight:normal;
+                              color:#FBDAA4;text-decoration:none;text-transform:uppercase;">
+                      &#9658;&nbsp;Comenzar Ahora
+                    </a>
+                  </td>
+                  <!-- Pixel accent right -->
+                  <td style="width:4px;background-color:#D68751;font-size:0;line-height:0;">&nbsp;</td>
+                  <td style="width:4px;background-color:#C25A37;font-size:0;line-height:0;">&nbsp;</td>
+                  <td style="width:6px;background-color:#861A0D;font-size:0;line-height:0;">&nbsp;</td>
+                </tr>
+              </table>
+
+              <!-- Info nota -->
+              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                  <td style="background-color:#1E1212;border-left:3px solid #D68751;
+                             padding:14px 18px;border-radius:0 2px 2px 0;">
+                    <p style="margin:0;font-family:Georgia,'Times New Roman',serif;
+                              font-size:13px;line-height:1.6;color:#D68751;">
+                      &#9632;&nbsp; Si el botón no funciona, copia y pega el enlace de la aplicación directamente en tu navegador.
+                    </p>
+                  </td>
+                </tr>
+              </table>
+
+            </td>
+          </tr>
+
+          <!-- ═══════════════════════════════════════
+               FOOTER
+          ════════════════════════════════════════ -->
+          <tr>
+            <td style="background-color:#1E1212;border:4px solid #D68751;border-top:1px solid #351A0E;
+                       border-radius:0 0 4px 4px;padding:20px 32px;text-align:center;">
+
+              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"
+                     style="margin-bottom:16px;">
+                <tr>
+                  <td style="height:2px;background-color:#861A0D;font-size:0;line-height:0;">&nbsp;</td>
+                  <td width="4" style="background-color:#C25A37;font-size:0;line-height:0;">&nbsp;</td>
+                  <td width="4" style="background-color:#D68751;font-size:0;line-height:0;">&nbsp;</td>
+                  <td width="4" style="background-color:#EEC28E;font-size:0;line-height:0;">&nbsp;</td>
+                  <td width="4" style="background-color:#FBDAA4;font-size:0;line-height:0;">&nbsp;</td>
+                  <td width="4" style="background-color:#EEC28E;font-size:0;line-height:0;">&nbsp;</td>
+                  <td width="4" style="background-color:#D68751;font-size:0;line-height:0;">&nbsp;</td>
+                  <td width="4" style="background-color:#C25A37;font-size:0;line-height:0;">&nbsp;</td>
+                  <td style="height:2px;background-color:#861A0D;font-size:0;line-height:0;">&nbsp;</td>
+                </tr>
+              </table>
+
+              <p style="margin:0 0 6px 0;font-family:Georgia,'Times New Roman',serif;
+                        font-size:11px;letter-spacing:3px;color:#D68751;text-transform:uppercase;">
+                &#9632; Correo automático &#9632;
+              </p>
+              <p style="margin:0;font-family:Georgia,'Times New Roman',serif;
+                        font-size:11px;color:#351A0E;">
+                No respondas a este mensaje. Fue generado automáticamente.
+              </p>
+            </td>
+          </tr>
+
+        </table>
+      </td>
+    </tr>
+  </table>
+
+</body>
+</html>

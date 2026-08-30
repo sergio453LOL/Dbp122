@@ -1,0 +1,41 @@
+services:
+    database:
+        image: postgres:17
+        container_name: spring-database
+        ports:
+            - "5432:5432"
+        environment:
+            - POSTGRES_USER=${POSTGRES_USER}
+            - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+            - POSTGRES_DB=${POSTGRES_DB}
+        volumes:
+            - postgres_data:/var/lib/postgresql/data
+        healthcheck:
+            test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
+            interval: 10s
+            timeout: 5s
+            retries: 5    
+    api-template:
+        build: .
+        # image: lazheart/spring-plantilla:latest
+        container_name: api-template
+        ports:
+            - "8080:8080"
+        depends_on:
+            database:
+                condition: service_healthy
+        environment:
+            - DB_HOST=${DB_HOST}
+            - DB_PORT=${DB_PORT}
+            - DB_NAME=${POSTGRES_DB}
+            - DB_USERNAME=${POSTGRES_USER}
+            - DB_PASSWORD=${POSTGRES_PASSWORD}
+            - DATABASE_URL=jdbc:postgresql://${DB_HOST}:${DB_PORT}/${POSTGRES_DB}
+            - JPA_DDL_AUTO=${JPA_DDL_AUTO}
+            - JWT_TOKEN=${JWT_TOKEN}
+            - JWT_EXPIRATION=${JWT_EXPIRATION}
+            - MAIL_USERNAME=${MAIL_USERNAME}
+            - MAIL_PASSWORD=${MAIL_PASSWORD}
+            - CORS_ALLOW_ORIGIN=${CORS_ALLOW_ORIGIN}
+volumes:
+  postgres_data:
